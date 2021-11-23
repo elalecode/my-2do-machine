@@ -1,0 +1,14 @@
+.float-btn {
+  z-index: 1;
+  position: fixed;
+  top: 90vh;
+  left: 90vw;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.float-btn:hover {
+  background-color: antiquewhite;
+}

@@ -1,9 +1,14 @@
 import React from 'react'
+import './style.css'
 
 function CreateTodoButton ({ setOpenModal }) {
+  const handleToggleModal = () => {
+    setOpenModal(prevState => !prevState)
+  }
   return (
     <button
-      onClick={() => setOpenModal(true)}
+      className='float-btn'
+      onClick={handleToggleModal}
     >
       +
     </button>
