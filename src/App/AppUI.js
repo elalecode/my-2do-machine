@@ -4,6 +4,7 @@ import { TodoCounter } from '../components/TodoCounter'
 import { TodoSearch } from '../components/TodoSearch'
 import { TodoList } from '../components/TodoList'
 import { TodoItem } from '../components/TodoItem'
+import { Modal } from '../components/Modal'
 import { CreateTodoButton } from '../components/CreateTodoButton'
 
 function AppUI () {
@@ -34,6 +35,10 @@ function AppUI () {
           />
         ))}
       </TodoList>
+
+      <Modal>
+        <p>Something...</p>
+      </Modal>
 
       <CreateTodoButton />
     </>
