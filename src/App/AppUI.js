@@ -13,7 +13,9 @@ function AppUI () {
     error,
     searchedTodos,
     completeTodo,
-    deleteTodo
+    deleteTodo,
+    openModal,
+    setOpenModal
   } = React.useContext(TodoContext)
   return (
     <>
@@ -36,11 +38,13 @@ function AppUI () {
         ))}
       </TodoList>
 
-      <Modal>
-        <p>Something...</p>
-      </Modal>
+      {openModal && (
+        <Modal>
+          <p>Something...</p>
+        </Modal>
+      )}
 
-      <CreateTodoButton />
+      <CreateTodoButton setOpenModal={() => { setOpenModal(true) }} />
     </>
   )
 }
