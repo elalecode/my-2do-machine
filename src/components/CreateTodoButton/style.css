@@ -7,8 +7,14 @@
   width: 50px;
   border-radius: 50%;
   cursor: pointer;
+  background-color: #264653;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
 }
 
 .float-btn:hover {
-  background-color: antiquewhite;
+  background-color: #2a9d8f;
 }

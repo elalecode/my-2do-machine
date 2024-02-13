@@ -8,7 +8,7 @@ function TodoItem ({ text, completed, onComplete, onDelete }) {
         <input type='checkbox' onClick={onComplete} id={text} checked={completed} />
         <label for={text}></label>
       </div>
-      <p className={completed ? 'checked' : 'unchecked'}>{text}</p>
+      <p className={`TodoItem-Title ${completed ? 'checked' : 'unchecked'}`}>{text}</p>
       <span className='TodoItem-button_delete' onClick={onDelete}>
         <FaRegTrashCan />
       </span>

@@ -33,6 +33,13 @@ li {
   align-items: center;
 }
 
+.TodoItem-Title {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
 .container {
   max-width: 600px;
 }
@@ -53,6 +60,12 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.TodoItem-button_delete:hover {
+  background-color: #e25836;
 }
 
 .checked {
@@ -67,7 +80,7 @@ li {
   position: relative;
   height: 28px;
   width: 28px;
-  margin: 0 15px 0 15px;
+  margin: 0 25px 0 15px;
 }
 
 .round label {
