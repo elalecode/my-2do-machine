@@ -10,8 +10,9 @@ function TodoSearch () {
   return (
     <input
       value={searchValue}
-      placeholder='Workout'
+      placeholder='Buscador'
       onChange={onChangeSearchValue}
+      className='search'
     />
   )
 }

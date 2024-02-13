@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaPlus } from "react-icons/fa6";
 import './style.css'
 
 function CreateTodoButton ({ setOpenModal }) {
@@ -10,7 +11,7 @@ function CreateTodoButton ({ setOpenModal }) {
       className='float-btn'
       onClick={handleToggleModal}
     >
-      +
+      <FaPlus />
     </button>
   )
 }

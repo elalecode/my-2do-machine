@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background-color: #f4a261;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  color: #264653;
+  width: 100%;
+}
+
+section {
+  border-radius: 20px;
+  border: 2px solid #264653;
+  background-color: #264653;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {  
+  list-style: none;
+  border-radius: 10px;
+  margin: 0 16px 15px 16px;
+  background-color: #e9c46a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.search {
+  height: 20px;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.TodoItem-button_delete {
+  background-color: #e76f51;
+  width: 50px;
+  height: 50px;
+  border-radius: 0px 10px 10px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.unchecked {
+  text-decoration: none;
+}
+
+.round {
+  position: relative;
+  height: 28px;
+  width: 28px;
+  margin: 0 15px 0 15px;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked+label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.round input[type="checkbox"]:checked+label:after {
+  opacity: 1;
 }

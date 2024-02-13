@@ -26,7 +26,7 @@ function TodoProvider (props) {
     searchedTodos = todos.filter(todo => {
       const todoText = todo.text.toLowerCase()
       const searchText = searchValue.toLowerCase()
-      return todoText.include(searchText)
+      return todoText.includes(searchText)
     })
   }
 
@@ -42,7 +42,7 @@ function TodoProvider (props) {
   const completeTodo = (text) => {
     const todoIndex = todos.findIndex(todo => todo.text === text)
     const newTodos = [...todos]
-    newTodos[todoIndex].completed = true
+    newTodos[todoIndex].completed = !todos[todoIndex].completed;
     saveTodos(newTodos)
   }
 
